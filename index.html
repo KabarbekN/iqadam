@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iqadam.kz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Плавная прокрутка для переходов */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- SECTION MAIN -->
+    <!-- SECTION MAIN -->
+    <!-- SECTION MAIN -->
+
+    <section id="main">
+        <div class="bg-white">
+            <header class="absolute inset-x-0 top-0 z-50">
+                <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                    <div class="flex lg:flex-1">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span class="sr-only">IQadam</span>
+                            <img class="h-8 w-auto"
+                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                        </a>
+                    </div>
+                    <div class="flex lg:hidden">
+                        <button type="button"
+                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                            <span class="sr-only">Открыть меню</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex lg:gap-x-12">
+                        <a href="#main" class="text-sm/6 font-semibold text-gray-900">Главная</a>
+                        <a href="#about-us" class="text-sm/6 font-semibold text-gray-900">О нас</a>
+                        <a href="#stats" class="text-sm/6 font-semibold text-gray-900">Как это работает?</a>
+                        <a href="#contact-us" class="text-sm/6 font-semibold text-gray-900">Свяжитесь с нами</a>
+                    </div>
+                    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                        <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
+                    </div>
+                </nav>
+                <!-- Mobile menu, show/hide based on menu open state. -->
+                <div class="lg:hidden" role="dialog" aria-modal="true">
+                    <!-- Background backdrop, show/hide based on slide-over state. -->
+                    <div class="fixed inset-0 z-50"></div>
+                    <div
+                        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5">
+                                <span class="sr-only">IQadam</span>
+                                <img class="h-8 w-auto"
+                                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                            </a>
+                            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                                <span class="sr-only">Закрыть меню</span>
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-6 flow-root">
+                            <div class="-my-6 divide-y divide-gray-500/10">
+                                <div class="space-y-2 py-6">
+                                    <a href="#main"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Главная</a>
+                                    <a href="#about-us"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">О
+                                        нас</a>
+                                    <a href="#stats"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Как
+                                        это работает?</a>
+                                    <a href="#contact-us"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Свяжитесь
+                                        с нами</a>
+                                </div>
+                                <div class="py-6">
+                                    <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#6d28d9] to-[#3b82f6] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                    <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+              <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div> -->
+                    <div class="text-center">
+                        <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+                            Инновационные решения для вашего бизнеса</h1>
+                        <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Откройте новые
+                            горизонты и позвольте вашим идеям воплотиться в жизнь. Мы создаем решения, которые помогут
+                            вашему бизнесу расти и достигать амбициозных целей.</p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="#"
+                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                                started</a>
+                            <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#4fbbdc] to-[#28a745] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="about-us">
+
+        <div class="bg-white py-24 sm:py-32">
+
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base/7 font-semibold text-indigo-600">Что мы делаем?</h2>
+                    <p
+                        class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
+                        Все, что нужно для развертывания вашего приложения</p>
+                    <p class="mt-6 text-lg/8 text-gray-600">Пусть ваш проект станет мощным инструментом для роста.
+                        Используйте наши решения для упрощенного развертывания и поддержки вашего приложения. Ускорьте
+                        развитие и достигайте новых высот вместе с нами.</p>
+                </div>
+                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900">
+                                <div
+                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
+                                    </svg>
+                                </div>
+                                Разработка ПО
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600">Мы берем на себя полный цикл разработки – от идеи
+                                и
+                                прототипа до запуска и поддержки.</dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900">
+                                <div
+                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                    </svg>
+                                </div>
+                                Интеграции с 1С, HIKVision и госуслугами
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600">Благодаря богатому опыту в интеграции, мы
+                                предлагаем
+                                решения, которые легко встраиваются в существующую инфраструктуру.</dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900">
+                                <div
+                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                    </svg>
+                                </div>
+                                Микросервисные и облачные решения
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600">Разрабатываем высоконагруженные и
+                                отказоустойчивые
+                                микросервисные приложения.</dd>
+                        </div>
+                        
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900">
+                                <div
+                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" />
+                                    </svg>
+                                </div>
+                                Веб приложения
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600">Мы учитываем потребности конечных пользователей,
+                                чтобы каждый интерфейс был максимально интуитивным и доступным.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+    </section>
+
+
+    <section id="stats">
+
+        <div class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-center mb-12 text-gray-900">Наша команда в цифрах</h2>
+                <p class="text-lg text-center text-gray-600 mb-16">
+                    Мы стремимся создавать решения, которые помогают нашим клиентам расти и достигать новых высот.
+                    Наши проекты разнообразны, а наши показатели говорят сами за себя.
+                </p>
+
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Крупных проектов, выполненных с полным развертыванием</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">15</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Среднее время разработки приложений</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">1-6
+                            месяцев</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Пользователей, использующих наши сервисы</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">10,000
+                        </dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Проектов завершено за последний год</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">58</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Активных клиентов на обслуживании</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">120+</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Среднее время разработки проекта</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">4 месяца</dd>
+                    </div>
+                    
+                </dl>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <section id="faq">
+        <div class="bg-white py-24 sm:py-32">
+            <div class="relative bg-white py-24 sm:py-32 overflow-hidden">
+
+                <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#4fbbdc] to-[#28a745] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+                    <!-- <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base/7 font-semibold text-indigo-600">Что мы делаем?</h2>
+                    <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">Все, что нужно для развертывания вашего приложения</p>
+                    <p class="mt-6 text-lg/8 text-gray-600">Пусть ваш проект станет мощным инструментом для роста. Используйте наши решения для упрощенного развертывания и поддержки вашего приложения. Ускорьте развитие и достигайте новых высот вместе с нами.</p>
+                </div> -->
+
+                    <h2 class="text-2xl font-bold text-center mb-6">Часто задаваемые вопросы</h2>
+
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Кто такие IQadam Systems?</summary>
+                            <p class="mt-2 text-gray-600">
+                                IQadam Systems — это компания, специализирующаяся на полном цикле разработки крупных
+                                приложений.
+                                Наша команда состоит из опытных разработчиков, способных создавать надежные и
+                                эффективные программные решения.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 2 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Какие проекты вы реализуете?</summary>
+                            <p class="mt-2 text-gray-600">
+                                Мы фокусируемся на предоставлении комплексных решений для сложных проектов, от начальной
+                                идеи до развертывания.
+                                Наша работа включает разработку приложений, интеграции с различными системами и создание
+                                решений, адаптированных под уникальные бизнес-задачи.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 3 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Какой стек технологий используется в
+                                IQadam Systems?</summary>
+                            <p class="mt-2 text-gray-600">
+                                Наш основной стек технологий включает <strong>Spring Boot</strong>, <strong>Go</strong>,
+                                <strong>Angular</strong> и <strong>PostgreSQL</strong>.
+                                Эти инструменты позволяют нам создавать масштабируемые и производительные приложения для
+                                различных бизнес-направлений.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 4 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Вы предлагаете интеграции с другими
+                                системами?</summary>
+                            <p class="mt-2 text-gray-600">
+                                Да, у нас есть большой опыт интеграции с различными системами, такими как 1С, HIKVision
+                                и государственные сервисы.
+                                Мы обеспечиваем плавную связь между вашим приложением и внешними платформами для
+                                поддержки бизнес-процессов.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 5 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Вы справляетесь с проектами большого
+                                масштаба?</summary>
+                            <p class="mt-2 text-gray-600">
+                                Безусловно. Наша команда оснащена всем необходимым для разработки и развертывания
+                                высоконагруженных приложений, которые масштабируются вместе с вашим бизнесом.
+                                От микросервисов до облачных решений — мы имеем опыт в создании систем, справляющихся с
+                                большими нагрузками.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 6 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">С какими отраслями вы работаете?
+                            </summary>
+                            <p class="mt-2 text-gray-600">
+                                Мы работаем с различными отраслями, включая финансы, розничную торговлю, здравоохранение
+                                и государственные структуры.
+                                Наши решения адаптированы под требования каждой отрасли, обеспечивая соответствие
+                                стандартам безопасности, масштабируемость и удобство.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 7 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Сколько времени занимает разработка
+                                приложения?</summary>
+                            <p class="mt-2 text-gray-600">
+                                Срок разработки зависит от сложности и объема проекта. Обычно наши проекты занимают от 1
+                                до 6 месяцев, от начального проектирования до развертывания.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 8 -->
+                        <details class="p-4 bg-gray-50 rounded-lg">
+                            <summary class="font-semibold text-lg cursor-pointer">Какую поддержку вы предоставляете
+                                после развертывания?</summary>
+                            <p class="mt-2 text-gray-600">
+                                Мы предоставляем комплексную поддержку после развертывания, включая регулярные
+                                обновления, устранение неполадок и оптимизацию производительности,
+                                чтобы ваше приложение продолжало работать стабильно и соответствовало изменяющимся
+                                бизнес-требованиям.
+                            </p>
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+
+    <section id="contact-us">
+        <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+            <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+                aria-hidden="true">
+                <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Свяжитесь с
+                    нами</h2>
+                <p class="mt-2 text-lg/8 text-gray-600">Мы всегда рады ответить на ваши вопросы и помочь вам найти
+                    лучшее решение для вашего бизнеса.</p>
+            </div>
+            <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div>
+                        <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Имя</label>
+                        <div class="mt-2.5">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Фамилия</label>
+                        <div class="mt-2.5">
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="company" class="block text-sm/6 font-semibold text-gray-900">Компания</label>
+                        <div class="mt-2.5">
+                            <input type="text" name="company" id="company" autocomplete="organization"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="email" class="block text-sm/6 font-semibold text-gray-900">Электронная почта</label>
+                        <div class="mt-2.5">
+                            <input type="email" name="email" id="email" autocomplete="email"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Номер телефона</label>
+                        <div class="relative mt-2.5">
+                            <input type="tel" name="phone-number" id="phone-number" autocomplete="tel"
+                                placeholder="+7 (___) ___-____"
+                                pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}$"
+                                title="Введите номер в формате +7 (XXX) XXX-XXXX"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                        </div>
+                    </div>
+                    
+
+                    <div class="sm:col-span-2">
+                        <label for="message" class="block text-sm/6 font-semibold text-gray-900">Сообщение</label>
+                        <div class="mt-2.5">
+                            <textarea name="message" id="message" rows="4"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <button type="submit"
+                        class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Связаться</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <section id="footer">
+
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- О компании -->
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">О нас</h2>
+                        <p class="text-gray-400">
+                            IQadam Systems — профессиональная команда разработчиков, предоставляющая услуги полного цикла для создания и развертывания масштабируемых приложений.
+                        </p>
+                    </div>
+        
+                    <!-- Навигация -->
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">Навигация</h2>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Главная</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Услуги</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">О нас</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Контакты</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Контакты -->
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">Контакты</h2>
+                        <ul class="space-y-2">
+                            <li class="text-gray-400">Телефон: +7 (776) 628-0198</li>
+                            <li class="text-gray-400">Email: info@iqadam.kz</li>
+                            <li class="text-gray-400">Адрес: г. Астана, Казахстан</li>
+                        </ul>
+                        <!-- Социальные сети -->
+                        <div class="flex mt-4 space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."/></svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."/></svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                    <p>&copy; 2024 IQadam Systems. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+        
+    </section>
+
+</body>
+
+</html>
