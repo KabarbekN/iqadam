@@ -203,7 +203,7 @@
                                 отказоустойчивые
                                 микросервисные приложения.</dd>
                         </div>
-                        
+
                         <div class="relative pl-16">
                             <dt class="text-base/7 font-semibold text-gray-900">
                                 <div
@@ -256,13 +256,15 @@
                     </div>
                     <div class="mx-auto flex max-w-xs flex-col gap-y-4">
                         <dt class="text-base/7 text-gray-600">Активных клиентов на обслуживании</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">120+</dd>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">120+
+                        </dd>
                     </div>
                     <div class="mx-auto flex max-w-xs flex-col gap-y-4">
                         <dt class="text-base/7 text-gray-600">Среднее время разработки проекта</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">4 месяца</dd>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">4 месяца
+                        </dd>
                     </div>
-                    
+
                 </dl>
             </div>
         </div>
@@ -409,19 +411,13 @@
 
     <section id="contact-us">
         <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-            <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-                aria-hidden="true">
-                <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
-            </div>
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Свяжитесь с
                     нами</h2>
                 <p class="mt-2 text-lg/8 text-gray-600">Мы всегда рады ответить на ваши вопросы и помочь вам найти
                     лучшее решение для вашего бизнеса.</p>
             </div>
-            <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+            <form onsubmit="sendMail(event)" class="mx-auto mt-16 max-w-xl sm:mt-20">
                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div>
                         <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Имя</label>
@@ -452,17 +448,14 @@
                         </div>
                     </div>
                     <div class="sm:col-span-2">
-                        <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Номер телефона</label>
+                        <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Номер
+                            телефона</label>
                         <div class="relative mt-2.5">
                             <input type="tel" name="phone-number" id="phone-number" autocomplete="tel"
-                                placeholder="+7 (___) ___-____"
-                                pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}$"
                                 title="Введите номер в формате +7 (XXX) XXX-XXXX"
                                 class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
                         </div>
                     </div>
-                    
-
                     <div class="sm:col-span-2">
                         <label for="message" class="block text-sm/6 font-semibold text-gray-900">Сообщение</label>
                         <div class="mt-2.5">
@@ -480,6 +473,7 @@
     </section>
 
 
+
     <section id="footer">
 
         <footer class="bg-gray-900 text-white py-12">
@@ -489,21 +483,22 @@
                     <div>
                         <h2 class="text-xl font-semibold mb-4">О нас</h2>
                         <p class="text-gray-400">
-                            IQadam Systems — профессиональная команда разработчиков, предоставляющая услуги полного цикла для создания и развертывания масштабируемых приложений.
+                            IQadam Systems — профессиональная команда разработчиков, предоставляющая услуги полного
+                            цикла для создания и развертывания масштабируемых приложений.
                         </p>
                     </div>
-        
+
                     <!-- Навигация -->
                     <div>
                         <h2 class="text-xl font-semibold mb-4">Навигация</h2>
                         <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white">Главная</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Услуги</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">О нас</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Контакты</a></li>
+                            <li><a href="#main" class="text-gray-400 hover:text-white">Главная</a></li>
+                            <li><a href="#stats" class="text-gray-400 hover:text-white">Услуги</a></li>
+                            <li><a href="#about-us" class="text-gray-400 hover:text-white">О нас</a></li>
+                            <li><a href="#contact-us" class="text-gray-400 hover:text-white">Контакты</a></li>
                         </ul>
                     </div>
-        
+
                     <!-- Контакты -->
                     <div>
                         <h2 class="text-xl font-semibold mb-4">Контакты</h2>
@@ -515,13 +510,19 @@
                         <!-- Социальные сети -->
                         <div class="flex mt-4 space-x-4">
                             <a href="#" class="text-gray-400 hover:text-white">
-                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."/></svg>
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M..." />
+                                </svg>
                             </a>
                             <a href="#" class="text-gray-400 hover:text-white">
-                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."/></svg>
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M..." />
+                                </svg>
                             </a>
                             <a href="#" class="text-gray-400 hover:text-white">
-                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M..."/></svg>
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M..." />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -531,20 +532,45 @@
                 </div>
             </div>
         </footer>
-        
+
     </section>
 
     <script>
+
+        function sendMail(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Collect form data
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const message = document.getElementById('message').value;
+
+            // Construct the mailto URL
+            const mailtoUrl = `mailto:youremail@example.com?subject=Contact Request from ${firstName} ${lastName}&body=` +
+                `Имя: ${firstName}%0D%0A` +
+                `Фамилия: ${lastName}%0D%0A` +
+                `Компания: ${company}%0D%0A` +
+                `Электронная почта: ${email}%0D%0A` +
+                `Номер телефона: ${phoneNumber}%0D%0A` +
+                `Сообщение: ${message}`;
+
+            // Open the mailto link
+            window.location.href = mailtoUrl;
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             const menuDialog = document.getElementById('menuDialog');
             const closeButton = document.getElementById('closeButton');
             const backdrop = document.getElementById('backdrop');
-    
+
             if (menuDialog && closeButton && backdrop) {
                 closeButton.addEventListener('click', () => {
                     menuDialog.classList.toggle('hidden');
                 });
-    
+
                 backdrop.addEventListener('click', () => {
                     menuDialog.classList.toggle('hidden');
                 });
@@ -553,8 +579,8 @@
             }
         });
     </script>
-    
-    
+
+
 </body>
 
 </html>
