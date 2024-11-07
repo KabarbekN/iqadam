@@ -28,10 +28,12 @@
             <header class="absolute inset-x-0 top-0 z-50">
                 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div class="flex lg:flex-1">
-                        <a href="#" class="-m-1.5 p-1.5">
+                        <a href="#main" class="-m-1.5 p-1.5">
                             <span class="sr-only">IQadam</span>
-                            <img class="h-8 w-auto"
-                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                            <!-- <div class="relative h-32">
+                                <img class="absolute h-32 w-auto" src="/images/iqadam_systems-no-back.png" style="top: 0; left: 0;">
+                            </div> -->
+                                        <img class="absolute h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt=""> 
                         </a>
                     </div>
                     <div class="flex lg:hidden">
@@ -119,9 +121,9 @@
                             горизонты и позвольте вашим идеям воплотиться в жизнь. Мы создаем решения, которые помогут
                             вашему бизнесу расти и достигать амбициозных целей.</p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="#"
-                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                                started</a>
+                            <a href="#about-us"
+                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Начать
+                                </a>
                             <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a> -->
                         </div>
                     </div>
@@ -448,14 +450,17 @@
                         </div>
                     </div>
                     <div class="sm:col-span-2">
-                        <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Номер
-                            телефона</label>
+                        <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Номер телефона</label>
                         <div class="relative mt-2.5">
                             <input type="tel" name="phone-number" id="phone-number" autocomplete="tel"
+                                placeholder="+7 (XXX) XXX-XXXX"
+                                inputmode="tel"
+                                pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{4}$"
                                 title="Введите номер в формате +7 (XXX) XXX-XXXX"
-                                class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
                         </div>
                     </div>
+                    
                     <div class="sm:col-span-2">
                         <label for="message" class="block text-sm/6 font-semibold text-gray-900">Сообщение</label>
                         <div class="mt-2.5">
@@ -537,6 +542,31 @@
 
     <script>
 
+        const phoneNumberInput = document.getElementById('phone-number');
+
+        phoneNumberInput.addEventListener('input', function (e) {
+            // Remove non-numeric characters except the initial "+7"
+            let value = phoneNumberInput.value.replace(/\D/g, '');
+    
+            // Ensure we start with "+7"
+            if (value.startsWith("7")) {
+                value = "+" + value;
+            } else if (!value.startsWith("+7")) {
+                value = "+7" + value;
+            }
+    
+            // Format according to "+7 (XXX) XXX-XXXX"
+            if (value.length > 2) value = value.slice(0, 2) + ' (' + value.slice(2);
+            if (value.length > 7) value = value.slice(0, 7) + ') ' + value.slice(7);
+            if (value.length > 12) value = value.slice(0, 12) + '-' + value.slice(12, 17);
+    
+            phoneNumberInput.value = value.slice(0, 17); // Limit to "+7 (XXX) XXX-XXXX"
+        });
+    
+        
+
+        var emailReceive = "nkabarbek@gmail.com"
+
         function sendMail(event) {
             event.preventDefault(); // Prevents the default form submission
 
@@ -549,7 +579,7 @@
             const message = document.getElementById('message').value;
 
             // Construct the mailto URL
-            const mailtoUrl = `mailto:youremail@example.com?subject=Contact Request from ${firstName} ${lastName}&body=` +
+            const mailtoUrl = `mailto:${emailReceive}?subject=Contact Request from ${firstName} ${lastName}&body=` +
                 `Имя: ${firstName}%0D%0A` +
                 `Фамилия: ${lastName}%0D%0A` +
                 `Компания: ${company}%0D%0A` +
