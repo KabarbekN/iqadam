@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iqadam.kz</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="./images/iqadam_systems-no-back.png" type="image/icon type"
-        style="width: 128px; height: 128px;">
+    <link rel="icon" href="./images/logo.png" type="image/icon type">
 
     <style>
         /* Плавная прокрутка для переходов */
@@ -26,83 +25,78 @@
     <!-- SECTION MAIN -->
     <!-- SECTION MAIN -->
 
-    <section id="main">
+    <section id="hero">
         <div class="bg-white">
-            <header class="absolute inset-x-0 top-0 z-50">
-                <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                    <div class="flex lg:flex-1">
-                        <!-- <a href="#main" class="-m-1.5 p-1.5">
-                            <span class="sr-only">IQadam</span> -->
-                        <!-- <div class="relative h-32">
-                                <img class="absolute h-32 w-auto" src="/images/iqadam_systems-no-back.png" style="top: 0; left: 0;">
-                            </div> -->
-                        <!-- <img class="absolute h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="Logo">  -->
-                        <!-- </a> -->
+            <header class="fixed inset-x-0 top-0 z-50 shadow-lg">
+                <nav class="container mx-auto flex items-center justify-between p-4 lg:px-8" aria-label="Global">
+                    <!-- Logo Section in a Container with Margin on Both Sides -->
+                    <div class="relative">
+                        <a href="#main">
+                            <img src="./images/iqadam_systems-no-back.png" alt="IQadam Systems Logo"
+                                class="h-[2.2rem] w-auto">
+                        </a>
                     </div>
+
+                    <!-- Centered Navigation Links -->
+                    <div class="hidden lg:flex lg:gap-x-12 lg:flex-grow lg:justify-center">
+                        <a href="#hero" class="text-sm font-semibold text-gray-900 hover:text-indigo-600">Главная</a>
+                        <a href="#main" class="text-sm font-semibold text-gray-900 hover:text-indigo-600">О нас</a>
+                        <a href="#faq" class="text-sm font-semibold text-gray-900 hover:text-indigo-600">Как это
+                            работает?</a>
+                        <a href="#contact-us"
+                            class="text-sm font-semibold text-gray-900 hover:text-indigo-600">Свяжитесь с нами</a>
+                    </div>
+
+
+                    <!-- Mobile Menu Button -->
                     <div class="flex lg:hidden">
-                        <button type="button"
+                        <button type="button" id="menuButton"
                             class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                            <span class="sr-only">Открыть меню</span>
+                            <span class="sr-only">Open menu</span>
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         </button>
                     </div>
-                    <div class="hidden lg:flex lg:gap-x-12">
-                        <a href="#main" class="text-sm/6 font-semibold text-gray-900">Главная</a>
-                        <a href="#about-us" class="text-sm/6 font-semibold text-gray-900">О нас</a>
-                        <a href="#stats" class="text-sm/6 font-semibold text-gray-900">Как это работает?</a>
-                        <a href="#contact-us" class="text-sm/6 font-semibold text-gray-900">Свяжитесь с нами</a>
-                    </div>
-                    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
-                    </div>
                 </nav>
-                <!-- Mobile menu, show/hide based on menu open state. -->
-                <div class="lg:hidden" role="dialog" aria-modal="true" id="menuDialog">
-                    <!-- Background backdrop, show/hide based on slide-over state. -->
-                    <div class="fixed inset-0 z-50" id="backdrop"></div>
-                    <div
-                        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                        <div class="flex items-center justify-between">
-                            <!-- <a href="#main" class="-m-1.5 p-1.5">
-                                <span class="sr-only">IQadam</span>
-                                <img class="h-8 w-auto"
-                                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                            </a> -->
-                            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="closeButton">
-                                <span class="sr-only">Закрыть меню</span>
-                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="mt-6 flow-root">
-                            <div class="-my-6 divide-y divide-gray-500/10">
-                                <div class="space-y-2 py-6">
-                                    <a href="#main"
-                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Главная</a>
-                                    <a href="#about-us"
-                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">О
-                                        нас</a>
-                                    <a href="#stats"
-                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Как
-                                        это работает?</a>
-                                    <a href="#contact-us"
-                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Свяжитесь
-                                        с нами</a>
-                                </div>
-                                <div class="py-6">
-                                    <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a> -->
-                                </div>
-                            </div>
-                        </div>
+
+                <!-- Mobile Menu -->
+                <div class="lg:hidden fixed inset-0 z-50 hidden bg-black bg-opacity-25" id="mobileMenuBackdrop"></div>
+                <div class="lg:hidden fixed inset-y-0 right-0 z-50 w-3/4 max-w-sm bg-white p-6 transition-transform transform translate-x-full"
+                    id="mobileMenu">
+                    <div class="flex items-center justify-between">
+                        <a href="#main" class="flex items-center -m-1.5 p-1.5">
+                            <img src="./images/iqadam_systems-no-back.png" alt="IQadam Systems Logo"
+                                class="h-12 w-auto">
+                        </a>
+                        <button type="button" id="closeMenuButton" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                            <span class="sr-only">Close menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 space-y-6">
+                        <a href="#hero"
+                            class="block text-base font-semibold text-gray-900 hover:text-indigo-600">Главная</a>
+                        <a href="#main" class="block text-base font-semibold text-gray-900 hover:text-indigo-600">О
+                            нас</a>
+                        <a href="#faq" class="block text-base font-semibold text-gray-900 hover:text-indigo-600">Как это
+                            работает?</a>
+                        <a href="#contact-us"
+                            class="block text-base font-semibold text-gray-900 hover:text-indigo-600">Свяжитесь с
+                            нами</a>
                     </div>
                 </div>
             </header>
+
+
+
+
+
 
             <div class="relative isolate px-6 pt-14 lg:px-8">
                 <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -124,7 +118,7 @@
                             горизонты и позвольте вашим идеям воплотиться в жизнь. Мы создаем решения, которые помогут
                             вашему бизнесу расти и достигать амбициозных целей.</p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="#about-us"
+                            <a href="#main"
                                 class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Начать
                             </a>
                             <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a> -->
@@ -142,7 +136,7 @@
     </section>
 
 
-    <section class="bg-white py-24 sm:py-32">
+    <section id="main" class="bg-white py-24 sm:py-32">
         <div class="flex justify-center">
             <div class="w-full max-w-4xl px-4">
                 <!-- О нас Section -->
@@ -159,7 +153,7 @@
             </div>
         </div>
     </section>
-    
+
 
 
 
@@ -252,7 +246,7 @@
             </div>
         </div>
     </section> -->
-    
+
 
     <section id="about-us">
 
@@ -359,6 +353,99 @@
                                 <dd class="mt-2 text-base/7 text-gray-600">Создаем производительные и удобные
                                     веб-приложения, которые помогают вашему бизнесу расти и привлекать клиентов..</dd>
                             </div>
+                            <div class="relative pl-16">
+                                <dt class="text-base/7 font-semibold text-gray-900">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                        <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                                data-slot="icon">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
+                                            </svg> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="white" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                        </svg>
+
+
+                                    </div>
+                                    Мобильные приложения
+                                </dt>
+                                <dd class="mt-2 text-base/7 text-gray-600">Создаем удобные и продуктивные мобильные
+                                    приложения, расширяющие возможности вашего бизнеса.</dd>
+                            </div>
+                            <div class="relative pl-16">
+                                <dt class="text-base/7 font-semibold text-gray-900">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                        <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                                data-slot="icon">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                            </svg> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="white" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
+                                        </svg>
+
+                                    </div>
+                                    Аналитика
+                                </dt>
+                                <dd class="mt-2 text-base/7 text-gray-600">Проводим глубокий анализ для создания
+                                    решений,
+                                    точно соответствующих задачам вашего бизнеса.</dd>
+                            </div>
+                            <div class="relative pl-16">
+                                <dt class="text-base/7 font-semibold text-gray-900">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                        <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                                data-slot="icon">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                            </svg> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="white" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.862 3.487a2.25 2.25 0 0 1 3.182 3.182L6.75 19.964a9.109 9.109 0 0 1-3.53.964l-1.265.106a.75.75 0 0 1-.823-.823l.106-1.265a9.11 9.11 0 0 1 .964-3.53L16.862 3.487zm0 0L14.25.875" />
+                                        </svg>
+
+                                    </div>
+                                    UX/UI Дизайн
+                                </dt>
+                                <dd class="mt-2 text-base/7 text-gray-600">Разрабатываем удобный и привлекательный
+                                    интерфейс
+                                    для лучшего взаимодействия с пользователями.</dd>
+                            </div>
+
+                            <div class="relative pl-16">
+                                <dt class="text-base/7 font-semibold text-gray-900">
+                                    <div
+                                        class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                                        <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                                data-slot="icon">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" />
+                                            </svg> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="white" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 19.5H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25zM8.625 8.625h6.75M8.625 12h6.75M8.625 15.375h4.5" />
+                                        </svg>
+
+                                    </div>
+                                    Техническая документация
+                                </dt>
+                                <dd class="mt-2 text-base/7 text-gray-600">Создаем понятную и структурированную
+                                    документацию
+                                    для упрощения поддержки и дальнейшего развития проекта.</dd>
+                            </div>
                         </dl>
                     </div>
                 </div>
@@ -388,105 +475,11 @@
                             Ускорьте
                             развитие и достигайте новых высот вместе с нами.</p>
                     </div> -->
-                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                        <div class="relative pl-16">
-                            <dt class="text-base/7 font-semibold text-gray-900">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                    <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true"
-                                            data-slot="icon">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
-                                        </svg> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="white" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                                    </svg>
-
-
-                                </div>
-                                Мобильные приложения
-                            </dt>
-                            <dd class="mt-2 text-base/7 text-gray-600">Создаем удобные и продуктивные мобильные
-                                приложения, расширяющие возможности вашего бизнеса.</dd>
-                        </div>
-                        <div class="relative pl-16">
-                            <dt class="text-base/7 font-semibold text-gray-900">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                    <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true"
-                                            data-slot="icon">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-                                        </svg> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="white" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
-                                    </svg>
-
-                                </div>
-                                Аналитика
-                            </dt>
-                            <dd class="mt-2 text-base/7 text-gray-600">Проводим глубокий анализ для создания решений,
-                                точно соответствующих задачам вашего бизнеса.</dd>
-                        </div>
-                        <div class="relative pl-16">
-                            <dt class="text-base/7 font-semibold text-gray-900">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                    <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true"
-                                            data-slot="icon">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                                        </svg> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="white" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M16.862 3.487a2.25 2.25 0 0 1 3.182 3.182L6.75 19.964a9.109 9.109 0 0 1-3.53.964l-1.265.106a.75.75 0 0 1-.823-.823l.106-1.265a9.11 9.11 0 0 1 .964-3.53L16.862 3.487zm0 0L14.25.875" />
-                                    </svg>
-
-                                </div>
-                                UX/UI Дизайн
-                            </dt>
-                            <dd class="mt-2 text-base/7 text-gray-600">Разрабатываем удобный и привлекательный интерфейс
-                                для лучшего взаимодействия с пользователями.</dd>
-                        </div>
-
-                        <div class="relative pl-16">
-                            <dt class="text-base/7 font-semibold text-gray-900">
-                                <div
-                                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                                    <!-- <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true"
-                                            data-slot="icon">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" />
-                                        </svg> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="white" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M19.5 19.5H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25zM8.625 8.625h6.75M8.625 12h6.75M8.625 15.375h4.5" />
-                                    </svg>
-
-                                </div>
-                                Техническая документация
-                            </dt>
-                            <dd class="mt-2 text-base/7 text-gray-600">Создаем понятную и структурированную документацию
-                                для упрощения поддержки и дальнейшего развития проекта.</dd>
-                        </div>
-                    </dl>
-                </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="services">
         <div class="bg-white py-24 sm:py-32">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Сервисное обслуживание серверного
@@ -804,7 +797,7 @@
                         <h2 class="text-xl font-semibold mb-4">Контакты</h2>
                         <ul class="space-y-2">
                             <li class="text-gray-400">Телефон: +7 (776) 628-0198</li>
-                            <li class="text-gray-400">Email: info@iqadam.kz</li>
+                            <li class="text-gray-400">Email: gulstankhaimuldina@gmail.com</li>
                             <li class="text-gray-400">Адрес: г. Астана, Казахстан</li>
                         </ul>
                         <!-- Социальные сети -->
@@ -841,35 +834,35 @@
             const slides = Array.from(carousel.children);
             const prevButton = document.getElementById('prev');
             const nextButton = document.getElementById('next');
-    
+
             const slideWidth = slides[0].getBoundingClientRect().width;
             let currentIndex = 0;
-    
+
             function updateCarousel() {
                 const offset = -currentIndex * slideWidth;
                 carousel.style.transform = `translateX(${offset}px)`;
             }
-    
+
             prevButton.addEventListener('click', () => {
                 if (currentIndex > 0) {
                     currentIndex--;
                 }
                 updateCarousel();
             });
-    
+
             nextButton.addEventListener('click', () => {
                 if (currentIndex < slides.length - 3) { // Show 3 slides at a time
                     currentIndex++;
                 }
                 updateCarousel();
             });
-    
+
             updateCarousel(); // Initialize carousel position
         });
-    
 
-        
-        
+
+
+
 
 
         function toggleModal() {
