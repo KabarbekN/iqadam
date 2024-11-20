@@ -7,6 +7,7 @@
     <title>iqadam.kz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
 
     <style>
         /* Плавная прокрутка для переходов */
@@ -27,7 +28,7 @@
 
     <section id="hero">
         <div class="bg-white">
-            <header class="fixed inset-x-0 top-0 z-50 shadow-lg">
+            <header class="fixed inset-x-0 top-0 z-50 shadow-lg backdrop-blur-md">
                 <nav class="container mx-auto flex items-center justify-between p-4 lg:px-8" aria-label="Global">
                     <!-- Logo Section in a Container with Margin on Both Sides -->
                     <div class="relative">
@@ -206,48 +207,61 @@
 
     </section> -->
 
-
-    <!-- <section id="carouselles">
-        <div class="bg-white flex items-start justify-center pt-10">
-            <div class="relative overflow-hidden rounded-lg max-w-6xl">
-                <div id="carousel" class="flex transition-transform duration-500 ease-in-out space-x-6">
-                    <div class="flex-shrink-0 w-64">
-                        <img src="./images/security.jpg" alt="Slide 1" class="w-full h-64 lg:h-80 rounded-lg shadow-md">
-                        <div class="text-center mt-2 text-gray-700 font-medium">Безопасность</div>
-                    </div>
-                    <div class="flex-shrink-0 w-64">
-                        <img src="./images/reliability.jpg" alt="Slide 2" class="w-full h-64 lg:h-80 rounded-lg shadow-md">
-                        <div class="text-center mt-2 text-gray-700 font-medium">Надежность</div>
-                    </div>
-                    <div class="flex-shrink-0 w-64">
-                        <img src="./images/adaptive.jpg" alt="Slide 3" class="w-full h-64 lg:h-80 rounded-lg shadow-md">
-                        <div class="text-center mt-2 text-gray-700 font-medium">Адаптивность</div>
-                    </div>
-                    <div class="flex-shrink-0 w-64">
-                        <img src="./images/actual.jpg" alt="Slide 4" class="w-full h-64 lg:h-80 rounded-lg shadow-md">
-                        <div class="text-center mt-2 text-gray-700 font-medium">Актуальность</div>
-                    </div>
-                    <div class="flex-shrink-0 w-64">
-                        <img src="./images/support.jpg" alt="Slide 5" class="w-full h-64 lg:h-80 rounded-lg shadow-md">
-                        <div class="text-center mt-2 text-gray-700 font-medium">Поддержка</div>
-                    </div>
-                    <div class="flex-shrink-0 w-64">
-                        <img src="./images/flexibility.jpg" alt="Slide 6" class="w-full h-64 lg:h-80 rounded-lg shadow-md">
-                        <div class="text-center mt-2 text-gray-700 font-medium">Гибкость</div>
-                    </div>
-                </div>
-    
-                <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full hover:bg-gray-800 focus:outline-none shadow-lg">
-                    &#10094;
-                </button>
-                <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full hover:bg-gray-800 focus:outline-none shadow-lg">
-                    &#10095;
-                </button>
-            </div>
-        </div>
-    </section> -->
-
-
+    <div class="slider-container">
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          navigation="true"
+          loop="true"
+          pagination-clickable="true"
+          space-between="30"
+          slides-per-view="3"
+        >
+          <swiper-slide>
+            <img
+              src="./images/slider-image-1.png"
+              alt="Slide 1"
+            />
+            <p>Безопасность</p>
+        </swiper-slide>
+        <swiper-slide>
+            <img
+            src="./images/slider-image-2.png"
+            alt="Slide 2"
+            />
+            <p>Надежность</p>
+        </swiper-slide>
+        <swiper-slide>
+            <img
+            src="./images/slider-image-3.png"
+            alt="Slide 3"
+            />
+            <p>Адаптивность</p>
+        </swiper-slide>
+        <swiper-slide>
+            <img
+            src="./images/slider-image-4.png"
+            alt="Slide 4"
+            />
+            <p>Актуальность</p>
+        </swiper-slide>
+        <swiper-slide>
+            <img
+            src="./images/slider-image-5.png"
+            alt="Slide 5"
+            />
+            <p>Поддержка</p>
+        </swiper-slide>
+        <swiper-slide>
+            <img
+            src="./images/slider-image-6.png"
+            alt="Slide 6"
+            />
+            <p>Гибкость</p>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+  
     <section id="about-us">
 
         <div class="bg-white py-24 sm:py-32">
@@ -951,11 +965,43 @@
                 button.textContent = "Скрыть";
             }
         }
-
-
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-</body>
-
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        loop: true,
+        speed: 700,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+      })
+    </script>
+  </body>
 </html>

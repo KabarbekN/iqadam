@@ -1,65 +1,30 @@
-body {
-    background-color: #F5F8FF;
+/* Slider styles */
+swiper-container {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 50px;
+
+  --swiper-theme-color: #5046e6;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
-    display: flex; /* Aligns items horizontally */
-    justify-content: space-between; /* Space between logo, nav, and spacer */
-    align-items: center; /* Aligns items vertically */
-    position: relative;
+swiper-slide p {
+  font-weight: 600;
 }
 
-.header-menu {
-    border-radius: 100%;
+swiper-slide img {
+  display: block;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
 }
-
-.logo-section {
-    display: flex;
-    align-items: center;
-}
-
-.nav-section {
-    position: absolute; /* Positions nav-section at the center */
-    left: 50%;
-    transform: translateX(-50%); /* Centers it horizontally */
-    display: flex;
-    gap: 20px;
-    background-color: white;
-}
-
-button {
-    background-color: #FFF;
-    border: 1px solid #ddd;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #f0f0f0;
-}
-
-.background-logo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/iqadam_systems-no-back.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px;
-    opacity: 0.1;
-    filter: blur(0px);
-    z-index: -1;
-}
-
-
-
